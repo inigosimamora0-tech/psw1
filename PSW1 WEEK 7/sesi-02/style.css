@@ -1,0 +1,117 @@
+
+body {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f5f5f5;
+}
+
+header,
+main {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+h1 {
+    color: #293d7a;
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+}
+
+button {
+    padding: .75rem 1rem;
+    color: white;
+    background: #293d7a;
+    border: 0;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid #175cd3;
+    outline-offset: 3px;
+}
+
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    border: 1px solid #ccd;
+    border-radius: 8px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.card h3,
+.card p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.card a {
+    align-self: start;
+}
+
+p,
+h2 {
+    overflow-wrap: anywhere;
+}
+
+.card2 {
+    border: 1px solid rgb(255, 11, 11);
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-wrap {
+    container-type: inline-size;
+}
+
+@container (min-width: 30rem) {
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 40rem) {
+    .catalog {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        transition: none;
+    }
+}
